@@ -1,1 +1,37 @@
-<p>register works!</p>
+
+<div class="form">
+    <form class="form-container" (ngSubmit)="onSubmit()" [formGroup]="form">
+        <h2>Welcome to our shop!</h2>
+        
+        <div class="top">
+            <span class="p-float-label">
+                <input  id="float-input" type="text" formControlName="firstName" pInputText> 
+                <label for="float-input">First Name</label>
+            </span>
+            <span class="p-float-label">
+                <input  id="float-input" type="text" formControlName="lastName" pInputText> 
+                <label for="float-input">Last Name</label>
+            </span>
+        </div>
+        <div class="bottom">
+            <span class="p-float-label">
+                <input  id="float-input" type="email" formControlName="email" pInputText> 
+                <label for="float-input">Email</label>
+            </span>
+            <span class="p-float-label">
+                <p-password id="inputtext" formControlName="password" [showClear]="true" [toggleMask]="true" ></p-password>
+                <label for="inputtext">Password</label>
+            </span>
+        </div>
+            
+            
+        <span>
+            <button pButton type="submit" [disabled]="!form.valid" class="p-button-secondary p-button-raised p-button-outlined">Register</button>
+        </span>
+        
+        <div class="register">
+            <p>Already have an account?</p>
+            <a [routerLink]="['/login']"><span class="underline--magical">Log In!</span></a>
+        </div>
+    </form>
+</div>

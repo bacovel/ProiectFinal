@@ -3,15 +3,24 @@ import { CommonModule } from '@angular/common';
 
 import { PrivateRoutingModule } from './private-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CardComponent } from './components/card/card.component';
+
+//primeNg
+import {CardModule} from 'primeng/card';
+import {ButtonModule} from 'primeng/button';
+
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
-    PrivateRoutingModule
+    PrivateRoutingModule,
+    CardModule,
+    ButtonModule
   ]
 })
 export class PrivateModule { }

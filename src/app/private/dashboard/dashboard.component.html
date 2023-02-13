@@ -1,1 +1,12 @@
-<p>dashboard works!</p>
+
+<div class="filters">
+    <h2>Filters</h2>
+    <input type="checkbox" (change)="checkValue($event)" />
+    <label class="label" for="checkbox">Top By Interest</label>
+</div>
+<div class="content">
+    
+    <app-card class="card" *ngFor="let phone of phones" [image]="phone.image" [title]="phone.phone_name" [slug]="phone.slug"></app-card>    
+</div>
+
+

@@ -1,0 +1,9 @@
+<p-card class="card" *ngIf="details" [header]="title" [style]="{width: '350px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <img class="image" alt="Card" [src]="image">
+    </ng-template>
+    <p>{{details!.release_date}}</p>
+    <p>{{details!.dimension}}</p>
+    <p>{{details!.os}}</p>
+    <p>{{details!.storage}}</p>
+</p-card>

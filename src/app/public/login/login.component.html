@@ -1,17 +1,28 @@
 
-<form action="">
-    <span class="p-float-label">
-        <input id="float-input" formControlName="username" type="text" pInputText> 
-        <label for="float-input">Username</label>
-    </span>
-    <span class="p-float-label">
-        <p-password id="inputtext" formControlName="password" [showClear]="true" [toggleMask]="true" ></p-password>
-        <label for="inputtext">Password</label>
-    </span>
-    <span>
-        <p-checkbox name="groupname" value="rememberme"></p-checkbox>
-        <label for="checkbox">Remember Me!</label>
-    </span>
-    
-    
-</form>
+<div class="form">
+    <form class="form-container" (ngSubmit)="onSubmit()" [formGroup]="form">
+        <h2>Welcome Back!</h2>
+        
+            <span class="p-float-label">
+                <input  id="float-input" type="email" formControlName="email" pInputText> 
+                <label for="float-input">Email</label>
+            </span>
+            <span class="p-float-label">
+                <p-password id="inputtext" formControlName="password" [showClear]="true" [toggleMask]="true" ></p-password>
+                <label for="inputtext">Password</label>
+            </span>
+            <span>
+                <p-checkbox name="groupname" value="rememberme"></p-checkbox>
+                <label class="label" for="checkbox">Remember Me!</label>
+            </span> 
+        <span>
+            <button pButton type="submit" class="p-button-secondary p-button-raised p-button-outlined">Login</button>
+        </span>
+        
+        <div class="register">
+            <p>You don't have an account?</p>
+            <a [routerLink]="['/']"><span class="underline--magical">Register here!</span></a>
+        </div>
+    </form>
+</div>
+
